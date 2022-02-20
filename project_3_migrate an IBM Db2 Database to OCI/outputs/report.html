@@ -27,40 +27,40 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">16: Manual ADB backup is not enabled and OCI handles all the backing up, patching, upgrading and tuning the database</td>
-</tr>
-<tr class="even">
-<td align="center">03: <span class="citation">@on-prem</span> DC, SQL Developer is used as a migration platform for moving IBM Db2 database to OCI ADB</td>
-</tr>
-<tr class="odd">
 <td align="center">06: <span class="citation">@on-prem</span> DC, Export utility is used to export data to OSS <span class="citation">@OCI [if DB Size &lt; 1TB]</span> which then export the data to ADB</td>
 </tr>
 <tr class="even">
-<td align="center">08: VCN in OCI is non-overlapping with Network <span class="citation">@on-prem</span> DC</td>
-</tr>
-<tr class="odd">
-<td align="center">09: <span class="citation">@OCI</span> ADB is configured with 2x OCPUS and 1TB storage with autoscaling enabled for optimum price and performance</td>
-</tr>
-<tr class="even">
-<td align="center">07: <span class="citation">@on-prem</span> DC, IF DBSIZE &gt; 1TB, then use FSS <span class="citation">@OCI</span> and (NFS) mount it at on-prem DC to export the data using export utility instead of OSS@OCI</td>
-</tr>
-<tr class="odd">
-<td align="center">14: If Bastion Host is used instead of Bastion Service, it is assumed that you put this in a DMZ, which cant be access publicly as set in a private subnet</td>
-</tr>
-<tr class="even">
-<td align="center">10: <span class="citation">@OCI</span> CloudGuard is enabled at tenancy level with Managed List Features to apply certain configurations at detector to maintain and monitor the security of your resources in OCI</td>
-</tr>
-<tr class="odd">
-<td align="center">13: Bastion Service instead of Bastion host <span class="citation">@privateSubnet</span> of OCI VCN is used to connect to the private compute instance or ADB in OCI with a session duration is 3hrs</td>
-</tr>
-<tr class="even">
-<td align="center">11: DRG is used <span class="citation">@OCI</span> to provide a private path between OCI VCN and on-prem DC</td>
+<td align="center">16: Manual ADB backup is not enabled and OCI handles all the backing up, patching, upgrading and tuning the database</td>
 </tr>
 <tr class="odd">
 <td align="center">04: <span class="citation">@on-prem</span> DC, SQL*Loader loads data from external file into tabkes of an Oracle Database. User defined the field specifications in a control file to interprete the format of the datafile</td>
 </tr>
 <tr class="even">
-<td align="center">01: Data and Metadata are migrated from an on-prem IBM Db2 Database deployment to an OCI Autonomous Database Warehouse</td>
+<td align="center">12: Service Gateway is used to connect to Object Storage Service from the VCN so that traffic never traverses the internet</td>
+</tr>
+<tr class="odd">
+<td align="center">10: <span class="citation">@OCI</span> CloudGuard is enabled at tenancy level with Managed List Features to apply certain configurations at detector to maintain and monitor the security of your resources in OCI</td>
+</tr>
+<tr class="even">
+<td align="center">13: Bastion Service instead of Bastion host <span class="citation">@privateSubnet</span> of OCI VCN is used to connect to the private compute instance or ADB in OCI with a session duration is 3hrs</td>
+</tr>
+<tr class="odd">
+<td align="center">02: IPSec VPN or OCI FastConnect securely connects CPE at on-prem DC to DRG at OCI</td>
+</tr>
+<tr class="even">
+<td align="center">05: <span class="citation">@on-prem</span> DC, Export utility is used to export metadata(i.e. table of tables in a db, their size + #rows in each table; table of columns in each database + type of data store in each column + which tables used those columns) to ADB directly</td>
+</tr>
+<tr class="odd">
+<td align="center">09: <span class="citation">@OCI</span> ADB is configured with 2x OCPUS and 1TB storage with autoscaling enabled for optimum price and performance</td>
+</tr>
+<tr class="even">
+<td align="center">08: VCN in OCI is non-overlapping with Network <span class="citation">@on-prem</span> DC</td>
+</tr>
+<tr class="odd">
+<td align="center">11: DRG is used <span class="citation">@OCI</span> to provide a private path between OCI VCN and on-prem DC</td>
+</tr>
+<tr class="even">
+<td align="center">14: If Bastion Host is used instead of Bastion Service, it is assumed that you put this in a DMZ, which cant be access publicly as set in a private subnet</td>
 </tr>
 <tr class="odd">
 <td align="center">14: Route Tables is properly configured with rules to route traffic from subnets to destinations outside a VCN, typically through gateways i.e. DRG and Service Gateway.</td>
@@ -69,13 +69,13 @@
 <td align="center">15: Security Lists are properly configured for SSH, NFS access in both ingress and egress settings</td>
 </tr>
 <tr class="odd">
-<td align="center">05: <span class="citation">@on-prem</span> DC, Export utility is used to export metadata(i.e. table of tables in a db, their size + #rows in each table; table of columns in each database + type of data store in each column + which tables used those columns) to ADB directly</td>
+<td align="center">03: <span class="citation">@on-prem</span> DC, SQL Developer is used as a migration platform for moving IBM Db2 database to OCI ADB</td>
 </tr>
 <tr class="even">
-<td align="center">02: IPSec VPN or OCI FastConnect securely connects CPE at on-prem DC to DRG at OCI</td>
+<td align="center">01: Data and Metadata are migrated from an on-prem IBM Db2 Database deployment to an OCI Autonomous Database Warehouse</td>
 </tr>
 <tr class="odd">
-<td align="center">12: Service Gateway is used to connect to Object Storage Service from the VCN so that traffic never traverses the internet</td>
+<td align="center">07: <span class="citation">@on-prem</span> DC, IF DBSIZE &gt; 1TB, then use FSS <span class="citation">@OCI</span> and (NFS) mount it at on-prem DC to export the data using export utility instead of OSS@OCI</td>
 </tr>
 </tbody>
 </table>
