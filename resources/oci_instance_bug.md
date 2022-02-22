@@ -4,6 +4,11 @@
 ---
 ### Bug Name: CONSOLE UI is failing to get the call from instance terminal for Compute Instance State Transition
 
+https://youtu.be/pcdhK4DvgwY
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/pcdhK4DvgwY)
+
+
+
 ---
 
 ### @OCI
