@@ -19,11 +19,11 @@ By Jahidul Arafat
 #### https://docs.oracle.com/en/learn/wrdprs_mysqldbs_wrkshp/index.html#introduction
 #### Problems in the existing setup:
 - [x] PHP Version used: 7.2
-- [x] RPM used: epel-7 and remi-7 which leads to a conflicts and corrupts the <yum update> and <dnf update> operations
+- [x] RPM used: epel-7 and remi-7 which leads to a conflicts and corrupts the **yum update** and **dnf update** operations
 - [x] and this begins when you try to enable remi-php74 as suggested in the oci lab above
-- [x] this results in <yum update> and <dnf update> operations are breaking
-- [x] also you cant find the intended module named php-mcrypt and leads you to error
-- [x] PHP setup in the OCI Lab for wordpress setup which is leading to all these troubles
+- [x] this results in **yum update** and **dnf update** operations are breaking
+- [x] also you can't find the intended module named **php-mcrypt** and leads you to error
+- [x] Let's check the PHP setup in the OCI Lab for wordpress setup which is leading to all these troubles
 
 ```shell
 # Setup leading to trouble
@@ -31,10 +31,10 @@ By Jahidul Arafat
 > sudo yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 > sudo yum-config-manager --enable remi-php74
 ```
-###  What if you have executed these three commands and dont know how to clean it up ? 
+###  What if you have executed these three commands and don't know how to clean it up ? 
 #### You can't proceed without cleaning it !!!!
-Cleaning this setup is even more complicated if you already installed php packages from it as this will lead you to the php:remi-7.2 stream and you
-have to reset it first if you want to install php8.1 from php:remi-8.1 stream, else this will leads you to a conflict.
+Cleaning this setup is even more complicated if you already installed php packages from it as this will lead you to the **php:remi-7.2** stream and you
+have to reset it first if you want to install **php8.1** from **php:remi-8.1 stream**, else this will lead you to a conflict.
 How to clean up this broken repos and modules:
 ```shell
 > cat /etc/os-release
@@ -55,7 +55,7 @@ How to clean up this broken repos and modules:
 ---
 
 
-## Now follow the clean PHP-8.1 installation from <REMI> repository with <mysqlsh> agent and WordPress Latest Version
+## Now follow the clean PHP-8.1 installation from **REMI** repository with **mysqlsh** agent and WordPress Latest Version
 
 #### Step-0. SSH to your bastion host/webserver
 > ssh -i <your_private_key> opc@<public_ip_address_of_your_bastion_or_webserver>
