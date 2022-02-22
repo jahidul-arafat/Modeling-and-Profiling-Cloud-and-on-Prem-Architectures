@@ -17,6 +17,7 @@ By Jahidul Arafat
 ---
 ## Existing Wordpress Installation as Suggested by OCI in their lab
 #### https://docs.oracle.com/en/learn/wrdprs_mysqldbs_wrkshp/index.html#introduction
+#### https://github.com/oracle-quickstart/oci-arch-wordpress-mds/blob/master/modules/wordpress/scripts/install_php74.sh
 #### Problems in the existing setup:
 - [x] PHP Version used: 7.2
 - [x] RPM used: epel-7 and remi-7 which leads to a conflicts and corrupts the **yum update** and **dnf update** operations
